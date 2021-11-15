@@ -1,0 +1,14 @@
+.BlockOne{
+    display:flex;
+    flex-direction: row;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%);
+    height:40vh;
+    justify-content: center;
+}
+@media only screen and (max-width :440px){
+    .BlockOne{
+        flex-direction: column;
+        align-items: center;
+    }
+}

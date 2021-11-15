@@ -1,0 +1,7 @@
+.BlockThree{
+    display:flex;
+    flex-direction: Column;
+    background-color: #131313;
+    
+    justify-content: center;
+}

@@ -1,0 +1,15 @@
+.BlockTwo{
+    display:flex;
+    flex-direction: row-reverse;
+    background-color: #232323;
+    height:40vh;
+    justify-content: space-around;
+}
+@media only screen and (max-width :440px){
+    .BlockTwo{
+        
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+    }
+}

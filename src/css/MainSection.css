@@ -1,0 +1,22 @@
+
+.spacer {
+    aspect-ratio: 900/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer {
+    background-image: url('../assets/layer.svg');
+}
+.layer3 {
+    background-image: url('../assets/layer3.svg');
+}
+.layer4 {
+    background-image: url('../assets/layer4.svg');
+}
+.layer2 {
+    background-image: url('../assets/layer2.png');
+
+
+}

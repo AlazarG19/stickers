@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
+
+
+.AnimatedTwocontainer {
+  width: 100%;
+  background: #232323;
+  height : 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AnimatedTwobox {
+  width: 250px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.AnimatedTwotitle {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.block1 {
+  width: 0%;
+  height: inherit;
+  background: #ffb510;
+  position: absolute;
+  animation: mainBlock 8s cubic-bezier(.74, .06, .4, .92) forwards infinite;
+  display: flex;
+}
+
+.AnimatedTwoh1 {
+  font-family: 'Poppins';
+  color: #fff;
+  font-size: 32px;-webkit-animation: mainFadeIn 2s forwards;
+  -o-animation: mainFadeIn 8s forwards infinite;
+  animation: mainFadeIn 8s forwards infinite;
+  animation-delay: 1.6s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+
+
+.role {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: 30px;}
+  .block2 {
+    width: 0%;
+    height: inherit;
+    background: #e91e63;
+    position: absolute;
+    animation: secBlock 8s cubic-bezier(.74, .06, .4, .92) forwards infinite;
+        animation-delay: 2s;
+    display: flex;
+  }
+
+  .AnimatedTwop {
+    animation: secFadeIn 8s forwards infinite;
+        animation-delay: 3.2s;
+    opacity: 0;
+    font-weight: 400;
+    font-family: 'Lato';
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+
+
+
+
+
+
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+
+  12% {
+    width: 100%;
+    left: 0;
+
+  }
+
+  24% {
+    width: 0;
+    left: 100%;
+  }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+
+  12% {
+    width: 100%;
+    left: 0;
+
+  }
+
+  24% {
+    width: 0;
+    left: 100%;
+  }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  75%{
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  75%{
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media only screen and (max-width :440px){
+  .AnimatedTwocontainer {
+   margin-top: 20px;
+  }
+}

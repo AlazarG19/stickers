@@ -1,0 +1,15 @@
+.testMain{
+    position: absolute;
+    top:500px
+}
+
+@media only screen and (min-width : 900px ){
+    .testMain{
+        top: 460px;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 482px){
+        .testMain{
+            top: 500px;
+    }
+}
