@@ -4,7 +4,7 @@ const Shop = () => {
   
   return ( 
     <div>
-      <div style = {{backgroundColor : "#E4E9F7"}}>
+      <div style = {{backgroundColor : "#E4E9F7",margin: "0 0 0 70px"}}>
         <NavBar/>
       </div>
       <DashBoard/>

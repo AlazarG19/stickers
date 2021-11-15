@@ -172,6 +172,8 @@ const DashBoard = () => {
       const [stickers, setStickers] = useState([...original]);
         const [filteredSticker, SetFilterSticker] = useState(stickers);
         const [catagory,setCatagory] = useState("All")
+        const [sideBarStat,setsideBarStat] = useState("sidebar")  
+        const [closeBtnStat,setcloseBtnStat] = useState("bx bx-menu")
         const onClick = () => {
           setStickers(original)
           setCatagory("All")
@@ -181,6 +183,36 @@ const DashBoard = () => {
           setStickers(original);
           setCatagory(catagory)
           setStickers(original.filter((sticker) => sticker.catagory === catagory))
+        }
+        const closeBtn = () =>{
+          if(sideBarStat.includes("open")){
+            setsideBarStat("sidebar")
+            menuBtnChange();
+          }else{
+            setsideBarStat("sidebar open")
+            menuBtnChange();
+          }
+        }
+        const searchBtn = () =>{
+          if(sideBarStat.includes("open")){
+            setsideBarStat("sidebar")
+            menuBtnChange();
+          }else{
+            setsideBarStat("sidebar open")
+            menuBtnChange();
+          }}
+        const menuBtnChange = ()=>{
+          if(sideBarStat.includes("open")){
+            setcloseBtnStat("bx bx-menu")
+          }else{
+            
+            setcloseBtnStat("bx bx-menu-alt-right")
+          }
+            
+        }
+        const close = ()=>{
+          setsideBarStat("sidebar")
+          setcloseBtnStat("bx bx-menu")
         }
     return (
         <div class="shopdiv">
@@ -192,61 +224,61 @@ const DashBoard = () => {
         }}>
             {catagory}
           </div>
-            <div class="sidebar">
+            <div class={sideBarStat}>
                 <div class="logo-details">
                     <div class="logo_name txt">Sticker List</div>
-                    <i class='bx bx-menu' id="btn"></i>
+                    <i class={closeBtnStat} onClick = {closeBtn} id="btn"></i>
                 </div>
                 <ul class="nav-list">
                     <li>
-                        <i class='bx bx-search'></i>
+                        <i class='bx bx-search' onClick = {searchBtn}></i>
                         <input type="text" placeholder="Search..." />
                         <span class=" txt tooltip">Search</span>
                     </li>
                     <li>
-                        <button onClick = {onClick}>
+                        <button onClick = {()=>{onClick(); close()}}>
                             <i class='bx bx-grid-alt'></i>
                             <span class=" txt links_name">All</span>
                         </button>
                         <span class=" txt tooltip">All</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('Anime'))}>
+                        <button onClick = {()=>{onDelete('Anime') ; close()}}>
                             <i class='bx bx-user'></i>
                             <span class=" txt links_name">Anime</span>
                         </button>
                         <span class=" txt tooltip">Anime</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('Movie'))}>
+                        <button onClick = {()=>{onDelete('Movie'); close()}}>
                             <i class='bx bx-chat'></i>
                             <span class=" txt links_name">Movie</span>
                         </button>
                         <span class=" txt tooltip">Movie</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('Music'))}>
+                        <button onClick = {()=>{onDelete('Music'); close()}}>
                             <i class='bx bx-pie-chart-alt-2'></i>
                             <span class=" txt links_name">Music</span>
                         </button>
                         <span class=" txt tooltip">Music</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('TV/show'))}>
+                        <button onClick = {()=>{onDelete('TV/show'); close()}}>
                             <i class='bx bx-folder'></i>
                             <span class=" txt links_name">Tv/Shows</span>
                         </button>
                         <span class=" txt tooltip">Tv/Shows</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('Sports'))}>
+                        <button onClick = {()=>{onDelete('Sports'); close()}}>
                             <i class='bx bx-cart-alt'></i>
                             <span class=" txt links_name">Sports</span>
                         </button>
                         <span class=" txt tooltip">Sports</span>
                     </li>
                     <li>
-                        <button onClick = {()=>(onDelete('Memes'))}>
+                        <button onClick = {()=>{onDelete('Memes'); close()}}>
                             <i class='bx bx-heart'></i>
                             <span class=" txt links_name">Memes</span>
                         </button>
