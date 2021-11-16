@@ -4,7 +4,7 @@ import MainSection from './container/MainSection'
 
 const Home = () => {
     return (
-        <div >
+        <div style = {{overflow:'hidden'}}>
         <IntroPage/>
         <div className = "testMain">
         <MainSection/>
