@@ -6,7 +6,7 @@ const Input = ({onchange}) => {
             <div className="form">
                 <input 
                     onChange={(event)=>{onchange(event.target.value)}}
-                    style={{marginLeft:"15px"}}
+                    style={{marginLeft:"15px",height: "60px"}}
                     type="text"
                     id="email"
                     className="form__input"
