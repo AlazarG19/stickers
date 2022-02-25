@@ -94,7 +94,7 @@ const Checkout = () => {
   }
   useEffect(() => {
     if (sessionStorage.getItem('id') === null) {
-      window.location.assign('http://localhost:3000')
+      window.location.assign('https://stickermania.netlify.app/Cart')
     }
     getData()
   }, [updated])
