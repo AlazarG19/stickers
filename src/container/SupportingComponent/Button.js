@@ -1,14 +1,9 @@
 import "../../css/Button.css"
-import { useState } from 'react'
-const Button = ({text,pcolor,scolor}) => {
-    const [txtColor,setTextColor] = useState(scolor)
-    const [bgColor,setBgColor] = useState(pcolor)
-    const [borderColor,setBorderColor] = useState(scolor)
-    
+const Button = ({text,pcolor,scolor,onclick}) => {
     return (
         <div className="button_container">
 
-        <button className="animationbtn">
+        <button onClick = {onclick} className="animationbtn">
             <span>{text}</span>
         </button>
     

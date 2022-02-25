@@ -1,23 +1,21 @@
 import React from 'react'
-import image from "../../assets/img/image (1).jpg"
 import "../../css/Sticker.css"
-import img from "../../assets/img/image (3).jpg"
-import Button from './Button'
-const Sticker = ({sticker, onDelete}) => {
+import AddToCartButton from './AddToCartButton'
+const Sticker = ({sticker}) => {
     return (
     <div className = "stickerdiv">
         <img 
         style = {{
-            width : "250px",
-            height: "350px"
+            maxHeight: "280px",
+            maxWidth:"300px"  
         }}
-        src = {img}/>
+        src = {`/img/${sticker.img}`} alt = "stickerimage"/>
         <h1
         style = {{textAlign:"center",color : "black"}}
         className = "txt"
-        > Sticker Code : {sticker.code}</h1>
-        <div style ={{marginBottom:"10px" ,display : "flex",justifyContent : "center"}}>
-            <Button text = "Add to Cart"/>
+        > Sticker Id : {sticker.id}</h1>
+        <div style ={{marginBottom:"10px",marginTop :"25px" ,display : "flex",justifyContent : "center"}}>
+            <AddToCartButton stickerId = {sticker.id}/>
         </div>
     </div>    )
 }

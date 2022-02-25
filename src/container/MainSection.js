@@ -4,7 +4,6 @@ import "../css/MainSection.css"
 import BlockThree from './SupportingComponent/BlockThree'
 import Foooter from './Foooter'
 const MainSection = () => {
-    
     return (
         <div className = "MainSection">
             <BlockOne/>

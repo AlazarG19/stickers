@@ -1,0 +1,242 @@
+/* the sliced up box */
+.card_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.trapdoor_parent{
+    position: relative;
+}
+.image{
+    width: 150px;
+}
+.trapdoor {
+    -webkit-transform: translateZ(0px);
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: -85px;
+    width: 170px;
+    height: 50px;
+    -webkit-transition: background 400ms ease-in-out;
+    -moz-transition: background 400ms ease-in-out;
+    -ms-transition: background 400ms ease-in-out;
+    -o-transition: background 400ms ease-in-out;
+    transition: background 400ms ease-in-out;
+}
+
+.trapdoor:hover {
+    background: #fff;
+}
+
+.trapdoor:hover .door {
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.trapdoor:hover .top {
+    top: -50%;
+}
+
+.trapdoor:hover .bottom {
+    top: 100%;
+}
+
+.trapdoor .twitter-follow-button {
+    
+    position: absolute !important;
+    margin-top: -14px;
+    left: 50%;
+    top: 50%;
+}
+
+.top {
+    top: 0%;
+    left: 0px;
+    border-radius:10px 10px 0px 0px;
+}
+
+.top:before {
+    top: 5px;
+}
+
+.bottom {
+    top: 50%;
+    left: 0px;
+    
+    border-radius:0px 0px 10px 10px;
+}
+
+.bottom:before {
+    top: -20px;
+}
+
+.door {
+    -webkit-transition: top 400ms, box-shadow 200ms, -webkit-transform 300ms;
+    -moz-transition: top 400ms, box-shadow 200ms, -moz-transform 300ms;
+    -ms-transition: top 400ms, box-shadow 200ms, -ms-transform 300ms;
+    -o-transition: top 400ms, box-shadow 200ms, -o-transform 300ms;
+    transition: top 400ms, box-shadow 200ms, transform 300ms;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(235, 238, 243);
+    position: absolute;
+    overflow: hidden;
+
+    width: 100%;
+    z-index: 2;
+    height: 50%;
+}
+
+.top:before {
+    position: absolute;
+    font-size: 15px;
+    display: block;
+    content: "ADD TO ";
+    width: 100px;
+    height: 20px;
+    left: 35%;
+    color: #000;
+    font-family: 'Comfortaa', cursive;
+}
+.bottom:after {
+    position: absolute;
+    font-size: 15px;
+    display: block;
+    content: "CART";
+    width: 100px;
+    height: 20px;
+    left: 40%;
+    color: #000;
+    font-family: 'Comfortaa', cursive;
+}
+/* button  */
+
+
+
+
+
+
+.social_main_btn {
+    width: 70px;
+    height: 90px;
+    position: relative;
+    margin-left: 55px;
+    cursor: pointer;
+}
+.sizebtn_txt {
+    text-decoration: none;
+    position: absolute;
+    top: -20px;
+    left: 18px;
+    font-size: 30px;
+    z-index: 5;
+    
+}
+.sizebtn_txt_medium{
+    left: 13px;
+}
+.sizebtn_txt_small{
+    left: 15px;
+}
+.sizebtn{
+    text-decoration: none;
+    border: 0;
+    color: Black;
+}
+.sizebtn:hover{
+    color: white;
+}
+.sizebtn:focus{
+    color: Black;
+}
+.social-sizebtns .sizebtn,
+.social-sizebtns .sizebtn:before,
+.social-sizebtns .sizebtn .fa {
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social-sizebtns .sizebtn:before {
+    top: 90%;
+    left: -110%;
+}
+
+.social-sizebtns .sizebtn.small:before,.sizebtn.medium:before,.sizebtn.large:before {
+    background-color: #3b5998;
+    
+}
+
+.social-sizebtns .sizebtn.small .fa {
+    color: #3b5998;
+}
+
+.social-sizebtns .sizebtn:focus:before,
+.social-sizebtns .sizebtn:hover:before {
+    top: -10%;
+    left: -10%;
+}
+
+.social-sizebtns .sizebtn:focus .fa,
+.social-sizebtns .sizebtn:hover .fa {
+    color: rgb(195, 97, 97);
+    transform: scale(1);
+}
+
+.social-sizebtns {
+    height: 90px;
+    margin: auto;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -70px;
+    right: 0;
+}
+
+.social-sizebtns .sizebtn {
+    display: inline-block;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 90px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28%;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+    opacity: 0.99;
+}
+
+
+.social-sizebtns .sizebtn:before {
+    content: '';
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.social-sizebtns .sizebtn .fa {
+    font-size: 38px;
+    vertical-align: middle;
+}
+
+.allbtn{
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+}
+.social-sizebtns .sizebtn:focus{
+    display: none;
+}
